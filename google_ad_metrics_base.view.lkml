@@ -3,6 +3,10 @@ include: "ad_metrics_base.view"
 view: google_ad_metrics_base_adapter {
   extension: required
   extends: [ad_metrics_base_adapter]
+  
+  dimension: average_position {
+    type: number
+  }
 
   measure: average_interaction_rate {
     label: "Interaction Rate"
