@@ -139,7 +139,7 @@ view: ad_impressions_adapter_base {
   dimension: average_position {
     hidden: yes
     type: number
-    sql: ${TABLE}.average_position ;;
+    sql: NULL ;;
   }
 
   dimension: active_view_impressions {
