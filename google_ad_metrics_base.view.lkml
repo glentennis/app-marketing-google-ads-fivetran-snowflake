@@ -28,7 +28,7 @@ view: google_ad_metrics_base_adapter {
     label: "Average Position"
     description: "Average auction position."
     type: number
-    sql: SUM(${average_position}*${impressions}) / NULLIF(${total_impressions},0) ;;
+    sql: NULL ;;
     value_format_name: decimal_1
   }
 
