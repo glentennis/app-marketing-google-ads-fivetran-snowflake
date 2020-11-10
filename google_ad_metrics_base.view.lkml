@@ -5,7 +5,7 @@ view: google_ad_metrics_base_adapter {
   extends: [ad_metrics_base_adapter]
   
   dimension: average_position {
-    type: number
+    sql: NULL ;;
   }
 
   measure: average_interaction_rate {
