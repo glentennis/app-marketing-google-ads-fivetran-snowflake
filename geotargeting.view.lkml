@@ -1,5 +1,5 @@
 view: geotargeting {
-  sql_table_name: google_ads.geotargeting ;;
+  sql_table_name: BI_DEV.geotargeting ;;
 
   dimension: canonical_name {
     type: string
