@@ -33,13 +33,13 @@ view: customer_adapter {
     sql_table_name:
   (
     SELECT account.*
-    FROM {{ customer.adwords_schema._sql }}.{{ customer.account_table_name._sql }} as account
+    FROM {{ customer.adwords_schema._sql }}.account_info as account
     INNER JOIN (
     SELECT
       date,
       customer_id,
       MAX(_fivetran_id) as max_fivetran_id
-    FROM {{ customer.adwords_schema._sql }}.{{ customer.account_table_name._sql }} GROUP BY 1,2) AS max_account
+    FROM {{ customer.adwords_schema._sql }}.account_info GROUP BY 1,2) AS max_account
     ON account._fivetran_id = max_account.max_fivetran_id
     AND account.date = max_account.date
     AND account.customer_id = max_account.customer_id
